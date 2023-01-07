@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    line-height: 1.5;
+    font-size: 0.9375rem;
+    padding: 2.5rem 1rem;
+    font-family: 'Lexend Deca';
+    background-color: var(--very-light-gray);
+}
+
+image{
+    display: block;
+    max-height: 100%;
+}
+
+h2{
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display';
+    color: var(--very-light-gray);
+    font-size: 2.5rem;
+}
+
+p{
+    color: var(--transparent-white);  
+}
+
+p,h2{
+    overflow-wrap: break-word;
+    margin: 1.5rem 0.5rem;
+}
+
+a{
+   display: inline-block;
+   text-decoration: none;
+   color: inherit;
+   background-color: var(--very-light-gray);
+   padding: 0.8rem 1.5rem;
+   border-radius: 100px;
+   border: 2px solid transparent;
+   transition: background 500ms;
+}
+
+a:hover{
+    background-color: inherit;
+    color: var(--very-light-gray);
+    border: 2px solid;
+}
+
+.card{
+    padding: 3rem;
+}
+
+.card:nth-child(1){
+    background-color: var(--bright-orange);
+    color: var(--bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.card:nth-child(2){
+    background-color: var(--dark-cyan);
+    color: var(--dark-cyan);
+}
+
+.card:nth-child(3){
+    background-color: var(--very-dark-cyan);
+    color: var(--very-dark-cyan);
+    border-radius:  0 0 10px 10px ;
+}
+
+@media (min-width:950px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    a{
+        margin-top: 4rem;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 310px);
+    }
+
+    .card{
+        padding: 2.6rem;
+    }
+
+    .card:nth-child(1){
+        border-radius: 10px 0 0 10px;
+    }
+    .card:nth-child(3){
+        border-radius: 0 10px 10px 0;
+    }
+}
