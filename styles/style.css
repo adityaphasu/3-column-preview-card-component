@@ -61,26 +61,41 @@ a:hover{
     border: 2px solid;
 }
 
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+
+.container{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .card{
     padding: 3rem;
 }
 
-.card:nth-child(1){
+.card:nth-child(2){
     background-color: var(--bright-orange);
     color: var(--bright-orange);
-    border-radius: 10px 10px 0 0;
 }
 
-.card:nth-child(2){
+.card:nth-child(3){
     background-color: var(--dark-cyan);
     color: var(--dark-cyan);
 }
 
-.card:nth-child(3){
+.card:nth-child(4){
     background-color: var(--very-dark-cyan);
     color: var(--very-dark-cyan);
-    border-radius:  0 0 10px 10px ;
 }
+
 
 @media (min-width:950px){
     body{
@@ -101,11 +116,5 @@ a:hover{
     .card{
         padding: 2.6rem;
     }
-
-    .card:nth-child(1){
-        border-radius: 10px 0 0 10px;
-    }
-    .card:nth-child(3){
-        border-radius: 0 10px 10px 0;
-    }
+    
 }
